@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+		<link rel="icon" type="image/x-icon" href="https://github.com/kellyanesantos.png">
+		<title>Links - Kellyane Santos</title>
+	</head>
+	<body class="light">
+		<button onclick="mudarTema()">Tema</button>
+		<div class="container">
+			<img src="https://github.com/kellyanesantos.png" class="avatar">
+			<h1 class="titulo">Kellyane Santos</h1>
+			<p class="username">@kellyane.dev</p>
+
+			<ul>
+				<li>
+					<a href="https://www.linkedin.com/in/kellyanesantos/" target="_blank"> <img src="img/linkedin.png" class="icon">
+						LinkedIn
+					</a>
+				</li>
+
+				<li>
+					<a href="https://github.com/kellyanesantos" target="_blank"> <img src="img/github.png" class="icon">
+					GitHub
+					</a>
+				</li>
+
+				<li>
+					<a href="mailto:kellyanefsanto@gmail.com" target="_blank"> <img src="img/email.png" class="icon">
+					Email
+					</a>
+				</li>
+
+				<li>
+					<a href="https://wa.me/+5588981998306" target="_blank"> <img src="img/whatsapp.png" class="icon">
+					Contato
+					</a>
+				</li>
+			</ul>
+
+			<footer>Feito com ❤ na Maratona Explorer 2.0 da <a href="https://rocketseat.com.br">Rocketseat</a></footer>
+		</div>
+
+		<script type="text/javascript">
+
+			// Função máquina de escrever
+			function typeWrite(elemento){
+			    const textoArray = elemento.innerHTML.split('');
+			    elemento.innerHTML = ' ';
+			    textoArray.forEach(function(letra, i){   
+			      
+			    setTimeout(function(){
+			        elemento.innerHTML += letra;
+			    }, 150 * i)
+
+			  });
+			}
+			const titulo = document.querySelector('.username');
+			typeWrite(titulo);
+
+
+			// Mudar tema
+
+			function mudarTema() {
+				var temas = ['light', 'dark', 'pink', 'dark-pink'];
+				var temaEscolhido = temas[Math.ceil(Math.random() * (temas.length - 1))];
+
+			    var element = document.body;
+			    element.classList.toggle(temaEscolhido);
+			}
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
